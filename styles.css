@@ -1,0 +1,517 @@
+
+
+/* Self Summary */
+.self-card {
+    width: 700px;
+    height: 360px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 10px 7px 7px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    justify-content: center;
+    margin-top: 10px;
+    transition: 0.5s;
+   }
+
+.self-card:hover {
+    transform: translateX(-3px);
+    box-shadow: 0px 30px 30px black;
+  }
+  
+img {
+    max-width: 200px; /* Adjust the value as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 250, 235);
+}
+
+p {
+    color: #1a1a1a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end of the header */
+    align-items: center; /* Center items vertically */
+    color: black;
+    padding: 20px 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Style for navigation bar */
+nav {
+    margin-right: 100px ;
+}
+
+
+/* Align navigation links to the right */
+nav ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    display: flex; /* Use flexbox to make the links go horizontally */
+    justify-content: flex-end; /* Align links to the right */
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+}
+
+nav ul li {
+    margin-left: 30px; /* Add space between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color:bisque;
+}
+
+.name {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+#content {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between items */
+    padding: 20px; /* Add some padding */
+}
+
+/* Content wrapper styles */
+.content-wrapper {
+    width: 65%; /* Content takes up 60% of available width */
+}
+
+/* Title styles */
+.BigName  {
+    font-family:monospace;
+    font-size: 73px;
+    color:black;
+    letter-spacing: -5px;
+    margin-left: 10px;
+    padding:10px;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color:#24233b;
+    font-family: monospace;
+    margin-left: 25px;
+}
+
+/* Paragraph styles */
+.self-summary {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #24233b;
+    font-family:monospace;
+    font-weight:200;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 24px;
+    width:80%;
+
+}
+
+/* Styles for social media links */
+.social-links {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin: 0 10px; /* Add some space between the images */
+}
+
+.social-links img {
+    width: 50px; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#content {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+
+
+@keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width: 13em;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
+  }
+  
+
+  .terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 17em;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top:15%;
+    right:17%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .terminal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+  }
+  
+  .terminal-controls {
+    float: right;
+  }
+  
+  .control {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background-color: #777;
+  }
+  
+  .control.close {
+    background-color: #e33;
+  }
+  
+  .control.minimize {
+    background-color: #ee0;
+  }
+  
+  .control.maximize {
+    background-color: #0b0;
+  }
+  
+  .terminal-title {
+    float: left;
+    line-height: 1.5em;
+    color: #eee;
+  }
+  
+  .text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green; /* Cursor */
+    animation: typeAndDelete 4s steps(11) infinite,
+      blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+  }
+  
+
+
+/* Project Section */
+.project-content{
+    margin-left: 10%;
+    margin-top: 70px;
+}
+.project {
+    --font-color: #323232;
+    --bg-color: #e0e0e0;
+    width: 80%;
+    height: 700px;
+    border-radius: 20px;
+    background: rgba(16, 86, 82, .5);
+    box-shadow: -9px 9px 18px #5a5a5a,
+                9px -9px 18px #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+  }
+  
+  .project:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 2px #5a5a5a;
+  }
+  
+  .project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color:aliceblue;
+  }
+
+  .project__img_tic{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color:aliceblue;
+    object-position: center bottom
+  }
+  
+  .card__descr-wrapper {
+    padding: 15px;
+    display: grid;
+  }
+  
+  .project__title {
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  
+  .project_descr {
+    color: var(--font-color);
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    transform: translateY(25%);
+    fill: var(--font-color);
+  }
+  
+  .card__links {
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: end;
+    margin-bottom: 20px;
+  }
+  
+  .card__links .link {
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .card__links .link:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+/* Education Section */
+
+.success {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 83%;
+    height: 75px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Horizontally center the element */
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px -3px #111;
+    margin-top: 60px;
+    margin-left: 63px; /* Auto margin for left and right */
+    margin-right: auto; /* Auto margin for left and right */
+    transition: transform 0.3s ease;
+}
+
+  .success:hover {
+    transform: translateY(-4px); 
+}
+  
+  .success__icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+    margin-right: 8px;
+  }
+  
+  .success__icon path {
+    fill: #393A37;
+  }
+  
+  .success__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #393A37;
+    margin-left: 10px
+  }
+  
+  .success__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .success__close path {
+    fill: #393A37;
+  }
+
+  #education {
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.school-container {
+    position: relative;
+    width: 900px;
+    height: 400px;
+    margin-top: 50px;
+  }
+
+  
+  .education-card {
+    position: relative;
+    width: 900px;
+    height: 400px;
+    background:rgba(16, 86, 82, .5);
+    border-radius: 8px;
+    color: #232323;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+    font-family:monospace;
+    z-index: 1;
+  }
+  
+  .education-card-hidden {
+    display: flex;
+    transform: translateY(200%);
+    flex-direction: column;
+    gap: .5rem;
+    transition: transform .7s ease-in, opacity .6s ease-in;
+    opacity: 0;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 20px;
+    color: rgba(16, 86, 82, .5);
+  }
+  
+  .education-card-hidden ul{
+    margin-left: 15px;
+    color: #0c0808;
+  }
+  
+  
+  /*Hovers*/
+  .education-card:hover {
+    border-color:#0c0808;
+  }
+  
+  .education-card:hover .education-card-hidden {
+    transform: translateY(40%);
+    opacity: 1;
+  }
+  
+  .education-card:hover .title {
+    transform: translateY(200%);
+  }
+  
+/*Text*/
+
+.education-title {
+    position: absolute;
+    transition: transform .25s ease-out, bottom .5s ease-out; /* Transition bottom property */
+    bottom: 1rem; /* Initially positioned at the bottom */
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.date {
+    position: absolute;
+    transition: transform .25s ease-out, bottom .5s ease-out; /* Transition bottom property */
+    bottom: 1rem; /* Initially positioned at the bottom */
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    color: black;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.education-card:hover .education-title {
+    bottom: calc(80% - 1rem); /* Shift the title to the top when hovered */
+}
+
+.education-card:hover .date {
+    bottom: calc(80% - 1rem); /* Shift the title to the top when hovered */
+}
+  
+/* Project Content */
+
+#projects {
+    margin-top: 100px;
+}
+
+/*Footer*/
+
+.footer {
+    background: #105652;
+    color: #fff;
+    padding: 15px 0;
+    text-align: right; /* Align content to the right */
+}
+
+.footer-content{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 90%;
+    margin-right: 2%; /* Adjust margin-right to create some space */
+    letter-spacing: -1px;
+}
+
+.footer-content p{
+    color:black;
+    font-weight: bold;
+}
+
+
