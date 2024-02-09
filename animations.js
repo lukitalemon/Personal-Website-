@@ -14,3 +14,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+window.addEventListener('load', function() {
+    var videoContainer = document.querySelector('.project__img-container');
+    var video = videoContainer.querySelector('video');
+    var aspectRatio = video.videoWidth / video.videoHeight;
+    var containerWidth = videoContainer.offsetWidth;
+    var containerHeight = containerWidth / aspectRatio;
+
+    videoContainer.style.height = containerHeight + 'px';
+});
