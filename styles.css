@@ -251,6 +251,7 @@ nav ul li a:hover {
     margin-bottom: 9%;
     height: 100%;
 }
+
 .project {
     --font-color: #323232;
     --bg-color: #e0e0e0;
@@ -297,13 +298,15 @@ nav ul li a:hover {
     border-radius: 20px 20px 0 0;
 }
 
-
   
-  .card__descr-wrapper {
-    display: grid;
+.card__descr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     width: 100%;
-    padding: 20px;
-  }
+    padding: 0px 20px 20px;
+}
   
   .project__title {
     color: var(--font-color);
@@ -408,7 +411,7 @@ nav ul li a:hover {
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
     font-family: 'Nunito', sans-serif;
-    margin-left: 10%;
+    margin-left: 17%;
     margin-top: 5%;
     margin-bottom: 5%;
 
@@ -416,7 +419,7 @@ nav ul li a:hover {
 
 .school-container {
     position: relative;
-    width: 80%;
+    width: 75%;
     height: 400px;
     margin-top: 50px;
   }
@@ -429,11 +432,12 @@ nav ul li a:hover {
     border-radius: 8px;
     color: #232323;
     padding: 2%;
-    border: 1px solid #e0e0e0;
     transition: all .5s ease-in-out;
     overflow: hidden;
     font-family:monospace;
     z-index: 1;
+    box-shadow: -9px 9px 18px #5a5a5a,
+    9px -9px 18px #ffffff;
   }
   
   .education-card-hidden {
